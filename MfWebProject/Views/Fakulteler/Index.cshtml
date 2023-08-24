@@ -1,0 +1,41 @@
+﻿@model IEnumerable<MfWebProject.Models.FakultelerSet>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Users_LayoutPage.cshtml";
+}
+
+<h2>Fakülteler</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FakulteAd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FakulteDurum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AKTS)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FakulteAd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FakulteDurum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AKTS)
+        </td>
+        <td>
+            
+        </td>
+    </tr>
+}
+
+</table>

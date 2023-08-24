@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MfWebProject.Models.OgrencilerSet>
+
+@{
+    ViewBag.Title = "Index2";
+    Layout = "~/Views/Shared/Admin_LayoutPage.cshtml";
+}
+
+
+
+<p>
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AdSoyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Yas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adres)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdSoyad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Yas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adres)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.OgrenciNo }, new { @class = "text-warning" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.OgrenciNo }, new { @class = "text-danger" })
+        </td>
+    </tr>
+}
+
+</table>

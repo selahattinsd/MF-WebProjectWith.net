@@ -1,0 +1,300 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7E3D05B0-DBC3-4B62-965B-A5720E692E15}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MfWebProject</RootNamespace>
+    <AssemblyName>MfWebProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44335</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminThme\401.html" />
+    <Content Include="AdminThme\404.html" />
+    <Content Include="AdminThme\500.html" />
+    <Content Include="AdminThme\assets\demo\chart-area-demo.js" />
+    <Content Include="AdminThme\assets\demo\chart-bar-demo.js" />
+    <Content Include="AdminThme\assets\demo\chart-pie-demo.js" />
+    <Content Include="AdminThme\assets\demo\datatables-demo.js" />
+    <Content Include="AdminThme\assets\img\error-404-monochrome.svg" />
+    <Content Include="AdminThme\charts.html" />
+    <Content Include="AdminThme\css\styles.css" />
+    <Content Include="AdminThme\index.html" />
+    <Content Include="AdminThme\js\datatables-simple-demo.js" />
+    <Content Include="AdminThme\js\scripts.js" />
+    <Content Include="AdminThme\layout-sidenav-light.html" />
+    <Content Include="AdminThme\layout-static.html" />
+    <Content Include="AdminThme\login.html" />
+    <Content Include="AdminThme\password.html" />
+    <Content Include="AdminThme\register.html" />
+    <Content Include="AdminThme\tables.html" />
+    <Content Include="Global.asax" />
+    <Content Include="HomeTheme\Home Theme\about.html" />
+    <Content Include="HomeTheme\Home Theme\contact.html" />
+    <Content Include="HomeTheme\Home Theme\css\bootstrap.css" />
+    <Content Include="HomeTheme\Home Theme\css\responsive.css" />
+    <Content Include="HomeTheme\Home Theme\css\style.css" />
+    <Content Include="HomeTheme\Home Theme\images\body-bg.jpg" />
+    <Content Include="HomeTheme\Home Theme\images\bus.png" />
+    <Content Include="HomeTheme\Home Theme\images\hero-bg.png" />
+    <Content Include="HomeTheme\Home Theme\images\hero.png" />
+    <Content Include="HomeTheme\Home Theme\images\kids.jpg" />
+    <Content Include="HomeTheme\Home Theme\images\kidss.jpg" />
+    <Content Include="HomeTheme\Home Theme\images\logo.png" />
+    <Content Include="HomeTheme\Home Theme\images\menu.png" />
+    <Content Include="HomeTheme\Home Theme\images\next.png" />
+    <Content Include="HomeTheme\Home Theme\images\prev.png" />
+    <Content Include="HomeTheme\Home Theme\images\right-arrow.png" />
+    <Content Include="HomeTheme\Home Theme\images\search-icon-mobile.png" />
+    <Content Include="HomeTheme\Home Theme\images\search-icon.png" />
+    <Content Include="HomeTheme\Home Theme\images\shape-1.png" />
+    <Content Include="HomeTheme\Home Theme\images\shape-2.png" />
+    <Content Include="HomeTheme\Home Theme\images\student.png" />
+    <Content Include="HomeTheme\Home Theme\images\teacher-1.jpg" />
+    <Content Include="HomeTheme\Home Theme\images\teacher-2.jpg" />
+    <Content Include="HomeTheme\Home Theme\images\teacher-3.jpg" />
+    <Content Include="HomeTheme\Home Theme\images\teacher-4.jpg" />
+    <Content Include="HomeTheme\Home Theme\index.html" />
+    <Content Include="HomeTheme\Home Theme\js\bootstrap.js" />
+    <Content Include="HomeTheme\Home Theme\js\jquery-3.4.1.min.js" />
+    <Content Include="HomeTheme\Home Theme\teacher.html" />
+    <Content Include="HomeTheme\Home Theme\vehicle.html" />
+    <Content Include="Models\Otomasyon.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Otomasyon.Context.cs</LastGenOutput>
+      <DependentUpon>Otomasyon.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Otomasyon.edmx.sql" />
+    <Content Include="Models\Otomasyon.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Otomasyon.cs</LastGenOutput>
+      <DependentUpon>Otomasyon.edmx</DependentUpon>
+    </Content>
+    <Content Include="Userstheme\assets\favicon.ico" />
+    <Content Include="Userstheme\assets\img\01.jpg" />
+    <Content Include="Userstheme\assets\img\02.jpg" />
+    <Content Include="Userstheme\assets\img\03.jpg" />
+    <Content Include="Userstheme\css\styles.css" />
+    <Content Include="Userstheme\index.html" />
+    <Content Include="Userstheme\js\scripts.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AkademisyenlerController.cs" />
+    <Compile Include="Controllers\FakultelerController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KampusController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AkademisyenlerSet.cs">
+      <DependentUpon>Otomasyon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FakultelerSet.cs">
+      <DependentUpon>Otomasyon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KampuslerSet.cs">
+      <DependentUpon>Otomasyon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OgrencilerSet.cs">
+      <DependentUpon>Otomasyon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Otomasyon.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Otomasyon.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Otomasyon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Otomasyon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Otomasyon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Otomasyon.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <EntityDeploy Include="Models\Otomasyon.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Otomasyon.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Otomasyon.edmx.diagram">
+      <DependentUpon>Otomasyon.edmx</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="Views\Shared\Home_LayoutPage.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Users_LayoutPage.cshtml" />
+    <Content Include="Views\Shared\Admin_LayoutPage.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Users\yeni.cshtml" />
+    <Content Include="Views\Akademisyenler\Index.cshtml" />
+    <Content Include="Views\Fakulteler\Index.cshtml" />
+    <Content Include="Views\Kampus\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Akademisyenler\Index2.cshtml" />
+    <Content Include="Views\Akademisyenler\Yeni.cshtml" />
+    <Content Include="Views\Akademisyenler\Edit.cshtml" />
+    <Content Include="Views\Akademisyenler\Delete.cshtml" />
+    <Content Include="Views\Fakulteler\Index2.cshtml" />
+    <Content Include="Views\Fakulteler\Yeni.cshtml" />
+    <Content Include="Views\Fakulteler\Edit.cshtml" />
+    <Content Include="Views\Fakulteler\Delete.cshtml" />
+    <Content Include="Views\Kampus\Index2.cshtml" />
+    <Content Include="Views\Kampus\Yeni.cshtml" />
+    <Content Include="Views\Kampus\Edit.cshtml" />
+    <Content Include="Views\Kampus\Delete.cshtml" />
+    <Content Include="Views\Users\Index2.cshtml" />
+    <Content Include="Views\Users\Yeni2.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51309</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44335/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

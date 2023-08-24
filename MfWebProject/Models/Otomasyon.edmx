@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Otomasyon.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AkademisyenlerSet">
+          <Key>
+            <PropertyRef Name="AkademiNo" />
+          </Key>
+          <Property Name="AkademiNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdSoyad" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Calısmalar" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Bolum" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Dal" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FakultelerSet">
+          <Key>
+            <PropertyRef Name="FakulteNo" />
+          </Key>
+          <Property Name="FakulteNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FakulteAd" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="FakulteDurum" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="AKTS" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KampuslerSet">
+          <Key>
+            <PropertyRef Name="KampusNo" />
+          </Key>
+          <Property Name="KampusNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KampusAd" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="KampusSayisi" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OgrencilerSet">
+          <Key>
+            <PropertyRef Name="OgrenciNo" />
+          </Key>
+          <Property Name="OgrenciNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdSoyad" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Yas" Type="int" Nullable="false" />
+          <Property Name="Adres" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="OtomasyonStoreContainer">
+          <EntitySet Name="AkademisyenlerSet" EntityType="Self.AkademisyenlerSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FakultelerSet" EntityType="Self.FakultelerSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KampuslerSet" EntityType="Self.KampuslerSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OgrencilerSet" EntityType="Self.OgrencilerSet" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Otomasyon" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="OtomasyonContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AkademisyenlerSets" EntityType="Otomasyon.AkademisyenlerSet" />
+          <EntitySet Name="FakultelerSets" EntityType="Otomasyon.FakultelerSet" />
+          <EntitySet Name="KampuslerSets" EntityType="Otomasyon.KampuslerSet" />
+          <EntitySet Name="OgrencilerSets" EntityType="Otomasyon.OgrencilerSet" />
+        </EntityContainer>
+        <EntityType Name="AkademisyenlerSet">
+          <Key>
+            <PropertyRef Name="AkademiNo" />
+          </Key>
+          <Property Name="AkademiNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdSoyad" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Calısmalar" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Bolum" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Dal" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FakultelerSet">
+          <Key>
+            <PropertyRef Name="FakulteNo" />
+          </Key>
+          <Property Name="FakulteNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FakulteAd" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FakulteDurum" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AKTS" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KampuslerSet">
+          <Key>
+            <PropertyRef Name="KampusNo" />
+          </Key>
+          <Property Name="KampusNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KampusAd" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KampusSayisi" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OgrencilerSet">
+          <Key>
+            <PropertyRef Name="OgrenciNo" />
+          </Key>
+          <Property Name="OgrenciNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdSoyad" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Yas" Type="Int32" Nullable="false" />
+          <Property Name="Adres" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OtomasyonStoreContainer" CdmEntityContainer="OtomasyonContainer">
+          <EntitySetMapping Name="AkademisyenlerSets">
+            <EntityTypeMapping TypeName="Otomasyon.AkademisyenlerSet">
+              <MappingFragment StoreEntitySet="AkademisyenlerSet">
+                <ScalarProperty Name="Dal" ColumnName="Dal" />
+                <ScalarProperty Name="Bolum" ColumnName="Bolum" />
+                <ScalarProperty Name="Calısmalar" ColumnName="Calısmalar" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="AkademiNo" ColumnName="AkademiNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FakultelerSets">
+            <EntityTypeMapping TypeName="Otomasyon.FakultelerSet">
+              <MappingFragment StoreEntitySet="FakultelerSet">
+                <ScalarProperty Name="AKTS" ColumnName="AKTS" />
+                <ScalarProperty Name="FakulteDurum" ColumnName="FakulteDurum" />
+                <ScalarProperty Name="FakulteAd" ColumnName="FakulteAd" />
+                <ScalarProperty Name="FakulteNo" ColumnName="FakulteNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KampuslerSets">
+            <EntityTypeMapping TypeName="Otomasyon.KampuslerSet">
+              <MappingFragment StoreEntitySet="KampuslerSet">
+                <ScalarProperty Name="KampusSayisi" ColumnName="KampusSayisi" />
+                <ScalarProperty Name="KampusAd" ColumnName="KampusAd" />
+                <ScalarProperty Name="KampusNo" ColumnName="KampusNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OgrencilerSets">
+            <EntityTypeMapping TypeName="Otomasyon.OgrencilerSet">
+              <MappingFragment StoreEntitySet="OgrencilerSet">
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="Yas" ColumnName="Yas" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="OgrenciNo" ColumnName="OgrenciNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
